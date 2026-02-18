@@ -1,1 +1,145 @@
+<% layout("/layouts/boilerplate") %>
 
+<style>
+    .full-width {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        background-color: #f8f9fa;
+        padding: 40px 60px;
+    }
+
+    .trending-title {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .trending-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    @media (max-width: 768px) {
+        .trending-container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .trending-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: 0.3s ease;
+    }
+
+    .trending-card:hover {
+        transform: translateY(-6px);
+    }
+
+    .trending-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding: 18px;
+    }
+
+    .location {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .price {
+        color: #28a745;
+        font-weight: bold;
+        margin-top: 6px;
+    }
+
+    .rating {
+        color: #ff9800;
+        margin-top: 6px;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        margin-top: 8px;
+    }
+</style>
+
+<div class="full-width">
+
+    <h1 class="trending-title">
+        <i class="fa-solid fa-fire"></i> Trending Places
+    </h1>
+
+    <div class="trending-container">
+
+        <div class="trending-card">
+            <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5" alt="Manali">
+            <div class="card-content">
+                <div class="location">Manali, Himachal Pradesh</div>
+                <div class="price">₹2,500 / night</div>
+                <div class="rating">⭐⭐⭐⭐☆ (4.5)</div>
+                <div class="description">
+                    Beautiful hill station surrounded by snow mountains and adventure sports.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Goa">
+            <div class="card-content">
+                <div class="location">Goa</div>
+                <div class="price">₹3,000 / night</div>
+                <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                <div class="description">
+                    Famous for beaches, nightlife, seafood, and water activities.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41" alt="Jaipur">
+            <div class="card-content">
+                <div class="location">Jaipur, Rajasthan</div>
+                <div class="price">₹2,000 / night</div>
+                <div class="rating">⭐⭐⭐⭐☆ (4.4)</div>
+                <div class="description">
+                    The Pink City known for majestic forts and rich Rajasthani culture.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2" alt="Munnar">
+            <div class="card-content">
+                <div class="location">Munnar, Kerala</div>
+                <div class="price">₹2,800 / night</div>
+                <div class="rating">⭐⭐⭐⭐⭐ (4.7)</div>
+                <div class="description">
+                    Scenic tea gardens, waterfalls, and peaceful green valleys.
+                </div>
+            </div>
+        </div>
+        
+        <div class="trending-card">
+            <img src="https://imgs.search.brave.com/9yPJWsLJh1MJm1DeIOZS0EvqpBOXPtlYSzbis6ZfprU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuY29udGVudHN0/YWNrLmlvL3YzL2Fz/c2V0cy9ibHQwNmY2/MDVhMzRmMTE5NGZm/L2JsdDAxNjQ3MThl/YzBkMjgxZWIvNjg1/YzI0NWNlMzZhNWRm/MjBmMzI0MjYyL2xh/a2UtcGljaG9sYS0y/MTU1NTMxXy1fSGVh/ZGVyX0Rlc2t0b3Au/anBnP2ZpdD1jcm9w/JmRpc2FibGU9dXBz/Y2FsZSZhdXRvPXdl/YnAmcXVhbGl0eT02/MCZjcm9wPXNtYXJ0/JndpZHRoPTQyNSZo/ZWlnaHQ9MjQw" alt="Udaipur">
+            <div class="card-content">
+                <div class="location">Udaipur, Rajasthan</div>
+                <div class="price">₹3,200 / night</div>
+                <div class="rating">⭐⭐⭐⭐⭐ (4.6)</div>
+                <div class="description">
+                    Known as the City of Lakes, famous for royal palaces, beautiful sunsets, and luxury heritage stays.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
