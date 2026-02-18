@@ -40,7 +40,7 @@ Custom middleware for controlling access, validating forms, or processing upload
 - Templating / UI: EJS + CSS + HTML
 - Database: MongoDB (via Mongoose)
 - Utility Libraries: Middleware, helpers, routing
-
+---
 ### 📂 Project Structure
 src/
 ├── controllers/
@@ -55,7 +55,7 @@ src/
 ├── schema.js
 ├── middleware.js
 ├── package.json
-
+---
 ## ▶️ Running the Project Locally
 
 1. Clone repository - git clone https://github.com/ashwanikumar107/WanderLust.git
@@ -68,3 +68,20 @@ src/
 
 4. Run the server - node app.js
 5. Open in browser - http://localhost:8080
+---
+### 📊 How to Use
+
+- Start the server
+- Browse property listings
+- Add new listings (if implemented)
+- Explore details and images
+- Use navigation to find specific stays
+---
+### 🧠 Why This Project?
+
+- This project helps learn and practice:
+- Full-stack app structure
+- Express routing and middleware
+- EJS templating and frontend rendering
+- MongoDB CRUD operations
+- Structuring backend applications cleanly
