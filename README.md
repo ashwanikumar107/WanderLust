@@ -40,3 +40,31 @@ Custom middleware for controlling access, validating forms, or processing upload
 - Templating / UI: EJS + CSS + HTML
 - Database: MongoDB (via Mongoose)
 - Utility Libraries: Middleware, helpers, routing
+
+### 📂 Project Structure
+src/
+├── controllers/
+├── init/
+├── models/
+├── public/
+├── routes/
+├── utils/
+├── views/
+├── app.js
+├── cloudConfig.js
+├── schema.js
+├── middleware.js
+├── package.json
+
+## ▶️ Running the Project Locally
+
+1. Clone repository - git clone https://github.com/ashwanikumar107/WanderLust.git
+
+2. Install dependencies - npm install
+
+3. Set up Environment
+   - Add any required environment variables (MongoDB URI, Cloudinary keys, etc.)
+   - Create a .env file if needed
+
+4. Run the server - node app.js
+5. Open in browser - http://localhost:8080
