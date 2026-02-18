@@ -1,8 +1,8 @@
 # 🌍 WanderLust Travel Listing Web Application
 
-A full-stack travel booking web application built with classic backend and frontend technologies to list and manage travel stays, explore property listings, and handle basic user interactions (no official README was provided).
+A full-stack travel booking web application built with classic backend and frontend technologies to list and manage travel stays, explore property listings, and handle basic user interactions.
 ---
-## ✨ Project Overview
+### ✨ Project Overview
 
 An interactive travel platform where users can view, add, and manage travel property listings — similar in concept to marketplace apps for stays and rentals. The codebase includes backend routes, database models, static assets, views, and middleware.
 ---
