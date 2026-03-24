@@ -86,6 +86,14 @@ app.get("/listings/trending", (req, res) => {
     res.render("Category/trending");
 });
 
+app.get("/listings/Rooms", (req, res) => {
+    res.render("Category/Rooms.ejs");
+});
+
+app.get("/listings/IconicCities", (req, res) => {
+    res.render("Category/iconiccities.ejs");
+});
+
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/",userRouter);
