@@ -94,6 +94,38 @@ app.get("/listings/IconicCities", (req, res) => {
     res.render("Category/iconiccities.ejs");
 });
 
+app.get("/listings/Mountains", (req, res) => {
+    res.render("Category/Mountains");
+});
+
+app.get("/listings/Castles", (req, res) => {
+    res.render("Category/Castles");
+});
+
+app.get("/listings/AmazingPools", (req, res) => {
+    res.render("Category/AmazingPools");
+});
+
+app.get("/listings/Camping", (req, res) => {
+    res.render("Category/Camping");
+});
+
+app.get("/listings/Farms", (req, res) => {
+    res.render("Category/Farms");
+});
+
+app.get("/listings/Arctic", (req, res) => {
+    res.render("Category/Arctic");
+});
+
+app.get("/listings/Dome", (req, res) => {
+    res.render("Category/Dome");
+});
+
+app.get("/listings/Boats", (req, res) => {
+    res.render("Category/Boats");
+});
+
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/",userRouter);
