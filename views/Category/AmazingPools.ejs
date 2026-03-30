@@ -1,0 +1,198 @@
+<% layout("/layouts/boilerplate") %>
+
+<style>
+    .full-width {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        background-color: #eef7f9; /* Light water-themed background */
+        padding: 40px 60px;
+    }
+
+    .trending-title {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2.2rem;
+        font-weight: bold;
+        color: #0056b3;
+    }
+
+    .trending-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    @media (max-width: 992px) {
+        .trending-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .trending-container {
+            grid-template-columns: 1fr;
+        }
+        .full-width {
+            padding: 20px;
+        }
+    }
+
+    .trending-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden; 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trending-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 25px rgba(0,123,255,0.2);
+    }
+
+    .card-img-container {
+        width: 100%;
+        height: 250px;
+        overflow: hidden; 
+    }
+
+    .trending-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease; 
+    }
+
+    .trending-card:hover img {
+        transform: scale(1.1); 
+    }
+
+    .card-content {
+        padding: 18px;
+        flex-grow: 1;
+    }
+
+    .location {
+        font-size: 18px;
+        font-weight: bold;
+        color: #1a1a1a;
+    }
+
+    .price {
+        color: #007bff;
+        font-weight: bold;
+        margin-top: 6px;
+        font-size: 0.9rem;
+    }
+
+    .rating {
+        color: #00bcd4; /* Teal colored stars for water theme */
+        margin-top: 6px;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        margin-top: 8px;
+        line-height: 1.5;
+    }
+</style>
+
+<div class="full-width">
+
+    <h1 class="trending-title">
+        <i class="fa-solid fa-person-swimming"></i> Spectacular Pools in India
+    </h1>
+
+    <div class="trending-container">
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7" alt="Udaipur Pool">
+            </div>
+            <div class="card-content">
+                <div class="location">Lakeside Infinity, Udaipur</div>
+                <div class="price">Type: Semi-Private Moat Pool</div>
+                <div class="rating">⭐⭐⭐⭐⭐ (5.0)</div>
+                <div class="description">
+                    A magnificent pool that wraps around the palace like a moat, offering views of Lake Pichola and the City Palace.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7" alt="Shimla Pool">
+            </div>
+            <div class="card-content">
+                <div class="location">Himalayan Infinity Pool, Shimla</div>
+                <div class="price">Type: Temperature Controlled</div>
+                <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                <div class="description">
+                    An outdoor infinity whirlpool located 8,250 feet above sea level with a panoramic view of the cedar forests and snowy peaks.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" alt="Palace Pool">
+            </div>
+            <div class="card-content">
+                <div class="location">Royal Courtyard Pool, Udaipur</div>
+                <div class="price">Type: Heritage Marble Pool</div>
+                <div class="rating">⭐⭐⭐⭐☆ (4.8)</div>
+                <div class="description">
+                    Surrounded by white marble walls and carved arches, this pool sits in the middle of a floating palace in Lake Pichola.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6" alt="Fort Pool">
+            </div>
+            <div class="card-content">
+                <div class="location">Fort Terrace Pool, Jaipur</div>
+                <div class="price">Type: Hilltop Pool</div>
+                <div class="rating">⭐⭐⭐⭐☆ (4.7)</div>
+                <div class="description">
+                    Located at the foot of a 230-year-old warrior fort, this pool offers an organic view of the rugged Rajasthani landscape.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4" alt="Kerala Pool">
+            </div>
+            <div class="card-content">
+                <div class="location">Meandering Pool, Kerala</div>
+                <div class="price">Type: 250m Meandering Pool</div>
+                <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                <div class="description">
+                    A unique long pool that flows past the backyards of heritage villas, mimicking the famous backwaters of Kerala.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48" alt="Gulmarg Indoor Pool">
+            </div>
+            <div class="card-content">
+                <div class="location">Glass-Enclosed Pool, Gulmarg</div>
+                <div class="price">Type: Heated Indoor Pool</div>
+                <div class="rating">⭐⭐⭐⭐☆ (4.6)</div>
+                <div class="description">
+                    Swim in a heated glass pavilion while watching the snowfall outside on the world-class ski slopes of Kashmir.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

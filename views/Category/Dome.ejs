@@ -1,0 +1,199 @@
+<% layout("/layouts/boilerplate") %>
+
+<style>
+    .full-width {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        background-color: #fcfaf5; /* Pearl/Cream background */
+        padding: 40px 60px;
+    }
+
+    .trending-title {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2.2rem;
+        font-weight: bold;
+        color: #856404; /* Bronze/Gold color */
+    }
+
+    .trending-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    @media (max-width: 992px) {
+        .trending-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .trending-container {
+            grid-template-columns: 1fr;
+        }
+        .full-width {
+            padding: 20px;
+        }
+    }
+
+    .trending-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden; 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border-top: 5px solid #ffc107;
+    }
+
+    .trending-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 25px rgba(133, 100, 4, 0.2);
+    }
+
+    .card-img-container {
+        width: 100%;
+        height: 250px;
+        overflow: hidden; 
+    }
+
+    .trending-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease; 
+    }
+
+    .trending-card:hover img {
+        transform: scale(1.1); 
+    }
+
+    .card-content {
+        padding: 18px;
+        flex-grow: 1;
+    }
+
+    .location {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .price {
+        color: #b8860b;
+        font-weight: bold;
+        margin-top: 6px;
+        font-size: 0.9rem;
+    }
+
+    .rating {
+        color: #ff9800;
+        margin-top: 6px;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        margin-top: 8px;
+        line-height: 1.5;
+    }
+</style>
+
+<div class="full-width">
+
+    <h1 class="trending-title">
+        <i class="fa-solid fa-archway"></i> Architectural Domes of India
+    </h1>
+
+    <div class="trending-container">
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://imgs.search.brave.com/LpqtMW0nfdPjCfVkSExklEI6xgKGlFvCkde-fNlJM4c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9h/L2EzL1Rhal9NYWhh/bF9Eb21lLkpQRw" alt="Taj Mahal Dome">
+            </div>
+            <div class="card-content">
+                <div class="location">The Main Dome, Taj Mahal</div>
+                <div class="price">Style: Onion Dome (Amrud)</div>
+                <div class="rating">⭐⭐⭐⭐⭐ (5.0)</div>
+                <div class="description">
+                    The world-famous white marble double dome. It reaches a height of 35 meters and is crowned with a lotus design and a gilded finial.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://imgs.search.brave.com/dqNd76yPrsiJCmieAByUwv8j4QM38KaJzn49ohvsAtA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/b3Vya2FybmF0YWth/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/R29sLUd1bWJhei1C/aWphcHVyLTg1MHg4/NTAuanBn" alt="Gol Gumbaz">
+            </div>
+            <div class="card-content">
+                <div class="location">Gol Gumbaz, Bijapur</div>
+                <div class="price">Feature: Whispering Gallery</div>
+                <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                <div class="description">
+                    The second largest dome in the world built without any external support. A single clap inside echoes seven times.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://imgs.search.brave.com/sW3vIl9SqzjIIFR1wd_n27VLj1fG-VG2UtXFm66Zmso/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNTM2/MDMyNzYwL3Bob3Rv/L2dyZWF0LXN0dXBh/LWF0LXNhbmNoaS5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/aXNtbzVidUZqY2Yw/STR2ZnJTTWloNEo0/MmhyYW9MWVNXZXRz/UHFVcmdTQT0" alt="Sanchi Stupa">
+            </div>
+            <div class="card-content">
+                <div class="location">Great Stupa, Sanchi</div>
+                <div class="price">Style: Buddhist Hemispherical Dome</div>
+                <div class="rating">⭐⭐⭐⭐☆ (4.8)</div>
+                <div class="description">
+                    One of the oldest stone structures in India. This massive brick dome symbolizes the arc of the heavens over the relics of Buddha.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1585135497273-1a86b09fe70e" alt="Humayun Tomb">
+            </div>
+            <div class="card-content">
+                <div class="location">Humayun's Tomb, Delhi</div>
+                <div class="price">Feature: First Double Dome in India</div>
+                <div class="rating">⭐⭐⭐⭐☆ (4.7)</div>
+                <div class="description">
+                    A precursor to the Taj Mahal, featuring an outer shell of marble and an inner shell to maintain the proportions of the interior.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://imgs.search.brave.com/gYbLXmnoszY2cbx0trU-vGwRjxOJGj4OTS0sy3SrBTo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI1/MjY3NTkwOC9waG90/by90aGUtZ2xvYmFs/LXZpcGFzc2FuYS1w/YWdvZGEtbWVkaXRh/dGlvbi1kb21lLWhh/bGwtaXMtc2Vlbi1v/bi10aGUtZGF5LW9m/LWJ1ZGRoYS1wdXJu/aW1hLWluLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1rLTBa/STMyR1Fuakh6bkhQ/WkZQQnhpSkQ4UXkz/M0lJUHd5ZEQ1dm9N/QmNnPQ" alt="Pagoda Mumbai">
+            </div>
+            <div class="card-content">
+                <div class="location">Global Pagoda, Mumbai</div>
+                <div class="price">Feature: World's Largest Hollow Dome</div>
+                <div class="rating">⭐⭐⭐⭐☆ (4.6)</div>
+                <div class="description">
+                    A massive golden dome built to seat 8,000 meditators. It is constructed entirely without pillars using interlocking stones.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1582298538104-fe2e74c27f59" alt="Lotus Temple">
+            </div>
+            <div class="card-content">
+                <div class="location">Lotus Temple, New Delhi</div>
+                <div class="price">Style: Modern Petal Dome</div>
+                <div class="rating">⭐⭐⭐⭐☆ (4.8)</div>
+                <div class="description">
+                    A unique Baha'i House of Worship made of 27 free-standing marble-clad petals arranged in clusters to form a dome.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,198 @@
+<% layout("/layouts/boilerplate") %>
+
+<style>
+    .full-width {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        background-color: #f8f9fa;
+        padding: 40px 60px;
+    }
+
+    .trending-title {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2.2rem;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+
+    .trending-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    @media (max-width: 992px) {
+        .trending-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .trending-container {
+            grid-template-columns: 1fr;
+        }
+        .full-width {
+            padding: 20px;
+        }
+    }
+
+    .trending-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden; 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trending-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .card-img-container {
+        width: 100%;
+        height: 250px;
+        overflow: hidden; 
+    }
+
+    .trending-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease; 
+    }
+
+    .trending-card:hover img {
+        transform: scale(1.1); 
+    }
+
+    .card-content {
+        padding: 18px;
+        flex-grow: 1;
+    }
+
+    .location {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .price {
+        color: #007bff;
+        font-weight: bold;
+        margin-top: 6px;
+        font-size: 0.9rem;
+    }
+
+    .rating {
+        color: #ff9800;
+        margin-top: 6px;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        margin-top: 8px;
+        line-height: 1.5;
+    }
+</style>
+
+<div class="full-width">
+
+    <h1 class="trending-title">
+        <i class="fa-solid fa-mountain-range"></i> Top Mountain Destinations
+    </h1>
+
+    <div class="trending-container">
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1544198365-f5d60b6d8190" alt="Pangong Lake">
+            </div>
+            <div class="card-content">
+                <div class="location">Pangong Tso, Ladakh</div>
+                <div class="price">Avg. Tour: ₹2,500 per person</div>
+                <div class="rating">⭐⭐⭐⭐⭐ (5.0)</div>
+                <div class="description">
+                    A high-altitude endorheic lake known for its changing colors, stretching from India to Tibet across the Himalayas.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23" alt="Rohtang Pass">
+            </div>
+            <div class="card-content">
+                <div class="location">Rohtang Pass, Manali</div>
+                <div class="price">Permit Fee: ₹550 per vehicle</div>
+                <div class="rating">⭐⭐⭐⭐☆ (4.7)</div>
+                <div class="description">
+                    The gateway to Lahaul and Spiti Valley, offering year-round snow and spectacular glacier views.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://imgs.search.brave.com/GhsYcxgelXKiStq2kb1sz_l03INLDTp9iwz64l_iqhw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTMx/OTA1ODQwMy9waG90/by9zY2VuaWMtdmll/dy1vZi1tb3VudGFp/bnMtYWdhaW5zdC1z/a3ktdmFsbGV5LW9m/LWZsb3dlcnMtbmF0/aW9uYWwtcGFyay11/dHRhcmFraGFuZC1p/bmRpYS5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9c3g2VDRo/bDdWQ3pmeVo5T1Ex/UV80QTBDb1N3V2l3/VE9DaEdYc0UtX3hk/RT0" alt="Valley of Flowers">
+            </div>
+            <div class="card-content">
+                <div class="location">Valley of Flowers, Uttarakhand</div>
+                <div class="price">Entry: ₹150 (Indians)</div>
+                <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                <div class="description">
+                    A UNESCO World Heritage site home to endemic alpine flowers and diverse fauna like the snow leopard.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957" alt="Tiger Hill">
+            </div>
+            <div class="card-content">
+                <div class="location">Tiger Hill, Darjeeling</div>
+                <div class="price">Avg. Taxi: ₹1,200 (Round Trip)</div>
+                <div class="rating">⭐⭐⭐⭐☆ (4.6)</div>
+                <div class="description">
+                    Famous for its panoramic sunrise views where the peaks of Kanchenjunga illuminate before the sun is seen elsewhere.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7" alt="Solang Valley">
+            </div>
+            <div class="card-content">
+                <div class="location">Solang Valley, Himachal</div>
+                <div class="price">Paragliding: ₹3,000 approx.</div>
+                <div class="rating">⭐⭐⭐⭐☆ (4.5)</div>
+                <div class="description">
+                    The adventure hub of the North, offering paragliding, zorbing, and skiing against a backdrop of giant peaks.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41" alt="Khajjiar">
+            </div>
+            <div class="card-content">
+                <div class="location">Khajjiar, Dalhousie</div>
+                <div class="price">Free Entry</div>
+                <div class="rating">⭐⭐⭐⭐☆ (4.8)</div>
+                <div class="description">
+                    Often called the 'Mini Switzerland of India', this saucer-shaped meadow is surrounded by dense cedar forests.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

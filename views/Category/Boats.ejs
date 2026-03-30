@@ -1,0 +1,186 @@
+<% layout("/layouts/boilerplate") %>
+
+<style>
+    .full-width {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        background-color: #f1f3f4; /* Soft sandy-grey background */
+        padding: 40px 60px;
+    }
+
+    .trending-title {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2.2rem;
+        font-weight: bold;
+        color: #003366; /* Deep nautical blue */
+    }
+
+    .trending-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    @media (max-width: 992px) {
+        .trending-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .trending-container {
+            grid-template-columns: 1fr;
+        }
+        .full-width {
+            padding: 20px;
+        }
+    }
+
+    .trending-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden; 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 4px solid #00acc1; /* Cyan accent for water */
+    }
+
+    .trending-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 25px rgba(0, 51, 102, 0.2);
+    }
+
+    .card-img-container {
+        width: 100%;
+        height: 250px;
+        overflow: hidden; 
+    }
+
+    .trending-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease; 
+    }
+
+    .trending-card:hover img {
+        transform: scale(1.1); 
+    }
+
+    .card-content {
+        padding: 18px;
+        flex-grow: 1;
+    }
+
+    .location {
+        font-size: 18px;
+        font-weight: bold;
+        color: #002b5b;
+    }
+
+    .price {
+        color: #00796b;
+        font-weight: bold;
+        margin-top: 6px;
+        font-size: 0.9rem;
+    }
+
+    .rating {
+        color: #ffa000;
+        margin-top: 6px;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #455a64;
+        margin-top: 8px;
+        line-height: 1.5;
+    }
+</style>
+
+<div class="full-width">
+
+    <h1 class="trending-title">
+        <i class="fa-solid fa-ship"></i> Famous Boating Destinations in India
+    </h1>
+
+    <div class="trending-container">
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2" alt="Alleppey Houseboat">
+            </div>
+            <div class="card-content">
+                <div class="location">Backwaters, Alleppey</div>
+                <div class="price">Type: Kettuvallam (Houseboat)</div>
+                <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                <div class="description">
+                    Sail through the "Venice of the East" in traditional wooden boats converted into luxury floating homes amidst coconut groves.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1566127444979-b3d2b654e3d7" alt="Dal Lake Shikara">
+            </div>
+            <div class="card-content">
+                <div class="location">Dal Lake, Srinagar</div>
+                <div class="price">Type: Shikara (Wooden Gondola)</div>
+                <div class="rating">⭐⭐⭐⭐⭐ (5.0)</div>
+                <div class="description">
+                    Experience a poetic ride in colorful Shikaras, visiting floating vegetable markets and ancient houseboats under the Himalayan shadows.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1561361058-c24cecae35ca" alt="Varanasi Boat">
+            </div>
+            <div class="card-content">
+                <div class="location">Ganga River, Varanasi</div>
+                <div class="price">Experience: Evening Aarti Boat Ride</div>
+                <div class="rating">⭐⭐⭐⭐☆ (4.8)</div>
+                <div class="description">
+                    Witness the spiritual Ganga Aarti from a rowing boat as thousands of lamps float on the sacred river at twilight.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Dawki Clear Water">
+            </div>
+            <div class="card-content">
+                <div class="location">Umngot River, Dawki</div>
+                <div class="price">Feature: Crystal Clear Glass Water</div>
+                <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                <div class="description">
+                    Famous for water so clear that boats appear to be floating in the air. A surreal experience in the hills of Meghalaya.
+                </div>
+            </div>
+        </div>
+
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://imgs.search.brave.com/mwhJ_Jl8FdFSN_klsDI5qUtAoNf_hHqXweIy3dUpKIo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjA4/MzcyMTIyMS9waG90/by9hLW5ldC1hbG9u/Zy10aGUtYnJhaG1h/cHV0cmEtcml2ZXIt/YXNzYW0taW5kaWEu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PUVIS0gzMUNwYVZU/WUI3WFhiYXEzYUps/c2dvQ0xJYnhnM3Zo/OGppOWVHZjg9" alt="Assam Brahmaputra">
+            </div>
+            <div class="card-content">
+                <div class="location">Brahmaputra River, Assam</div>
+                <div class="price">Experience: River Island Ferry</div>
+                <div class="rating">⭐⭐⭐⭐☆ (4.6)</div>
+                <div class="description">
+                    Cross the mighty Brahmaputra on local ferries to reach Majuli, the world’s largest river island, rich in neo-Vaishnavite culture.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,184 @@
+<% layout("/layouts/boilerplate") %>
+
+<style>
+    .full-width {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        background-color: #f4f1ea; /* Slightly warmer vintage background */
+        padding: 40px 60px;
+    }
+
+    .trending-title {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2.2rem;
+        font-weight: bold;
+        color: #5d4037;
+    }
+
+    .trending-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    @media (max-width: 992px) {
+        .trending-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .trending-container {
+            grid-template-columns: 1fr;
+        }
+        .full-width {
+            padding: 20px;
+        }
+    }
+
+    .trending-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden; 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trending-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .card-img-container {
+        width: 100%;
+        height: 250px;
+        overflow: hidden; 
+    }
+
+    .trending-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease; 
+    }
+
+    .trending-card:hover img {
+        transform: scale(1.1); 
+    }
+
+    .card-content {
+        padding: 18px;
+        flex-grow: 1;
+    }
+
+    .location {
+        font-size: 18px;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+
+    .price {
+        color: #8d6e63;
+        font-weight: bold;
+        margin-top: 6px;
+        font-size: 0.9rem;
+    }
+
+    .rating {
+        color: #ffc107;
+        margin-top: 6px;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #666;
+        margin-top: 8px;
+        line-height: 1.5;
+    }
+</style>
+
+<div class="full-width">
+
+    <h1 class="trending-title">
+        <i class="fa-solid fa-fort-awesome"></i> Historic Castles & Forts of India
+    </h1>
+
+    <div class="trending-container">
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://imgs.search.brave.com/PNIfKv4Ia-eaM5IKrWT3D8swdy74WNnfGONtOOA-ReM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/Ny8xMi8xOS80MC9h/bWJlci1mb3J0LTE1/MTI5MDRfNjQwLmpw/Zw" alt="Amer Fort">
+            </div>
+            <div class="card-content">
+                <div class="location">Amer Fort, Jaipur</div>
+                <div class="price">Entry: ₹100 (Indians)</div>
+                <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                <div class="description">
+                    A majestic sandstone palace featuring the Sheesh Mahal (Mirror Palace) and stunning Hindu-Muslim architectural elements.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://imgs.search.brave.com/4AndZ3PscxIP6hYme4KXgBBFVdFjaH81UnaJGH47Tj0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjIw/NjE0NDA2My9waG90/by9kcm9uZS1zaG90/LW9mLW1laGVyYW5n/YXJoLWZvcnQtYXQt/dHdpbGlnaHQtaW4t/am9kaHB1ci1pbmRp/YS5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9ZnB0bC1WWThD/YW9CZ0tKbUJLUVpr/NkVSNDRXc1lDYXl0/Q3llcUpJNUxNVT0" alt="Mehrangarh Fort">
+            </div>
+            <div class="card-content">
+                <div class="location">Mehrangarh Fort, Jodhpur</div>
+                <div class="price">Entry: ₹100 - ₹200</div>
+                <div class="rating">⭐⭐⭐⭐⭐ (5.0)</div>
+                <div class="description">
+                    Towering 400 feet above the "Blue City," this fort is one of the largest in India with intricate carvings and massive courtyards.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://imgs.search.brave.com/3nx12MsjojglzovZpgtVyGDwI4qH7xFchhoo-jms9MA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTg3/NjM3NTQ4L3Bob3Rv/L2dvbGRlbi1mb3J0/LW9mLWphaXNhbG1l/ci1yYWphc3RoYW4t/aW5kaWEuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPTV4MUFj/WEt3TlFCVXAwbDZ1/UmZuYW5ESDBmZGF3/bUJ3anFWSzBkblJZ/d1k9" alt="Jaisalmer Fort">
+            </div>
+            <div class="card-content">
+                <div class="location">The Golden Fort, Jaisalmer</div>
+                <div class="price">Entry: Free (Living Fort)</div>
+                <div class="rating">⭐⭐⭐⭐☆ (4.7)</div>
+                <div class="description">
+                    A rare "living fort" where a quarter of the old city's population still resides within its yellow sandstone walls.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://imgs.search.brave.com/CPWfpfL5kpy0f8zhhyJPsPX_j_mtkzKmFAX-jVsy8ig/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS1jZG4udHJpcGFk/dmlzb3IuY29tL21l/ZGlhL3Bob3RvLW8v/MGYvNWEvYmUvZjgv/dGhlLWdyZWF0cy1v/Zi1lYXJseS1tZXdh/ci5qcGc" alt="Chittorgarh Fort">
+            </div>
+            <div class="card-content">
+                <div class="location">Chittorgarh Fort, Mewar</div>
+                <div class="price">Entry: ₹40 (Indians)</div>
+                <div class="rating">⭐⭐⭐⭐☆ (4.8)</div>
+                <div class="description">
+                    The largest fort in India, known for the Victory Tower and the tragic, brave history of the Rajput kings and queens.
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1614082242765-7c98ca0f3df3" alt="Gwalior Fort">
+            </div>
+            <div class="card-content">
+                <div class="location">Gwalior Fort, Madhya Pradesh</div>
+                <div class="price">Entry: ₹75 (Indians)</div>
+                <div class="rating">⭐⭐⭐⭐☆ (4.6)</div>
+                <div class="description">
+                    Described as "the pearl among fortresses in India," it features vibrant blue tiled walls and a rich musical heritage.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
